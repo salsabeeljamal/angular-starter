@@ -4,23 +4,17 @@
 
 ```bash
 # clone our repo
-# --depth 1 removes all but one .git commit history
-git clone --depth 1 https://github.com/salsabeeljamal/angular5-ngrx-ssr-starter
+git clone https://github.com/salsabeeljamal/angular5-ngrx-ssr-starter
 
 # change directory to our repo
 cd angular5-ngrx-ssr-starter
 
 # install the repo with npm
 npm install
-
 #or
-
 yarn install
 
 # start the server
-npm start
-
-# use Hot Module Replacement
 npm run ssr
 
 ```
@@ -47,6 +41,11 @@ Next, you will need to create a server in the root directory of the application.
 
 [server.ts](https://github.com/salsabeeljamal/angular5-ngrx-ssr-starter/blob/master/server.ts)
 
+And
+
+The server.ts file needs a webpack configuration to generate the Javascript file to run on the server. Create a webpack.server.config.js file in the root directory of your application and add the following code:
+
+[webpack.server.config.js](https://github.com/salsabeeljamal/angular5-ngrx-ssr-starter/blob/master/webpack.server.config.js)
 
 
 
