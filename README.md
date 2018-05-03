@@ -47,5 +47,11 @@ The server.ts file needs a webpack configuration to generate the Javascript file
 
 [webpack.server.config.js](https://github.com/salsabeeljamal/angular5-ngrx-ssr-starter/blob/master/webpack.server.config.js)
 
+To your package.json file, add the following commands to your scripts array:
 
-
+```sh
+"build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
+"serve:ssr": "node dist/server.js",
+"build:client-and-server-bundles": "ng build --prod && ng build --prod --app 1 --output-hashing=false",
+"webpack:server": "webpack --config webpack.server.config.js --progress --colors"
+```
