@@ -15,8 +15,12 @@ npm install --save @angular/platform-server @nguniversal/module-map-ngfactory-lo
 ng generate universal angular-ssr
 ```
 
+## Create Node Server
 
+Next, you will need to create a server in the root directory of the application. This file will use the Javascript file produced by running npm run build:ssr using the server application configured in the .angular-cli.json file. It is then applied to the index.html page. Create a server.ts file in the root directory of your project and add the following code:
 
+link: 
+(https://github.com/salsabeeljamal/angular5-ngrx-ssr-starter/blob/master/server.ts)
 
 
 
