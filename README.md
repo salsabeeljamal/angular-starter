@@ -4,7 +4,7 @@
 
 ```bash
 # clone our repo
-git clone https://github.com/salsabeeljamal/angular5-ngrx-ssr-starter
+git clone git@github.com:salsabeeljamal/angular-starter.git
 
 # change directory to our repo
 cd angular5-ngrx-ssr-starter
