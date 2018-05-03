@@ -80,3 +80,26 @@ imports: [
   ...
 ]
 ```
+
+## SET UP Reducer
+Install your dependencies first:
+
+```sh
+npm i -S @ngrx/store @ngrx/store-devtools @ngrx/entity @ngrx/effects
+npm i -D @ngrx/schematics
+```
+
+Notice that we are booping around with @ngrx/schematics; they will get our state up and running without writing boilerplate.
+
+Now run the following to make @ngrx/schematics your default collection (optional):
+
+```sh
+ng set defaults.schematics.collection=@ngrx/schematics
+```
+
+Then run the following two lines to stub your State and an Effect:
+
+```sh
+ng generate store State --root --module app.module.ts
+ng generate effect Post --root --module app.module.ts
+```
