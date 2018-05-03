@@ -1,6 +1,27 @@
-# Angular-5 
+# server-side rendering and redux for Angular 5+ applications
 
-#Redux #SSR
+## Angular Universal
+Create new Angular project:
+
+```sh
+ng new angular-ssr
+```
+
+Inside that project, download the following packages and add Angular Universal:
+
+```sh
+cd angular-ssr
+npm install --save @angular/platform-server @nguniversal/module-map-ngfactory-loader ts-loader@3.5.0 express
+ng generate universal angular-ssr
+```
+
+
+
+
+
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
