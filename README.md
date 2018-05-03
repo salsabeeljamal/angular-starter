@@ -55,3 +55,28 @@ To your package.json file, add the following commands to your scripts array:
 "build:client-and-server-bundles": "ng build --prod && ng build --prod --app 1 --output-hashing=false",
 "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
 ```
+
+First run npm run build:ssr and when that is completed, run npm run serve:ssr. Your application should be served on localhost:4201.
+
+Let’s use the TransferState service in our application. In app.module.ts, import the BrowserTransferStateModule:
+
+```sh
+import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
+imports: [
+  BrowserModule.withServerTransition({appId: 'my-app'}),
+  BrowserTransferStateModule,
+  ...
+]
+```
+
+In app.server.module.ts, import the ServerTransferStateModule:
+
+```sh
+import { ServerModule, ServerTransferStateModule } from '@angular/platform-server';
+imports: [
+  AppModule,
+  ServerModule,
+  ServerTransferStateModule,
+  ...
+]
+```
